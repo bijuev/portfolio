@@ -1,0 +1,61 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}Contact - My Portfolio{% endblock %}
+
+{% block content %}
+<!-- Contact Header -->
+<section class="bg-gray-200 py-8 text-center">
+    <h1 class="text-4xl font-bold text-blue-600 mb-2">Contact Me</h1>
+    <p class="text-lg text-gray-700">I'd love to hear from you! Feel free to reach out for any inquiries or collaborations.</p>
+</section>
+
+<!-- Contact Form -->
+<section class="container mx-auto my-8 p-6 bg-white shadow rounded">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Get in Touch</h2>
+    <form action="{% url 'contact' %}" method="post" class="space-y-4">
+        {% csrf_token %}
+        
+        <!-- Name -->
+        <div>
+            <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500" required>
+        </div>
+        
+        <!-- Email -->
+        <div>
+            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500" required>
+        </div>
+        
+        <!-- Subject -->
+        <div>
+            <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+            <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500">
+        </div>
+        
+        <!-- Message -->
+        <div>
+            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+            <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500" required></textarea>
+        </div>
+        
+        <!-- Submit Button -->
+        <div>
+            <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-500 transition duration-200">Send Message</button>
+        </div>
+    </form>
+</section>
+
+<!-- Additional Contact Info -->
+<section class="container mx-auto my-8 p-6 bg-gray-100 rounded text-center">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Other Ways to Reach Me</h2>
+    <p class="text-gray-700 mb-4">I'm available on various platforms as well. Feel free to connect with me!</p>
+    <div class="flex justify-center space-x-6">
+        <a href="mailto:sekharanbijumon@gmail.com" class="text-blue-600 hover:text-blue-800"><i class="fas fa-envelope"></i> sekharanbijumon@gmail.com</a>
+        <a href="https://linkedin.com/in/bijumonsekharan" target="_blank" class="text-blue-600 hover:text-blue-800"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="tel:+917736099496" class="text-blue-600 hover:text-blue-800"><i class="fas fa-phone"></i> +91-7736099496</a>
+    </div>
+</section>
+{% endblock %}
+

@@ -1,0 +1,37 @@
+{% extends 'main/base.html' %}
+
+{% load  static %} 
+{% block title %}Home - Bijumon Portfolio{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bg-gray-200 py-20 text-center">
+    <h1 class="text-4xl font-bold text-blue-600 mb-4">Welcome to Bijumon Portfolio</h1>
+    <p class="text-lg text-gray-700">I'm a full-stack developer specialized in building modern web applications.</p>
+    <a href="{% url 'contact' %}" class="mt-6 inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-500">Get in Touch</a>
+</section>
+<!-- Portfolio Section -->
+<section class="py-12">
+  <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Featured Projects</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {% for project in projects %}
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+              {% if project.image %}
+                  <!-- Set width and height to control image size, with object-cover for uniform scaling -->
+                  <img src="{{ project.image_thumbnail.url }}" alt="{{ project.title }}" class="w-full h-48 object-cover">
+              {% else %}
+                  <!-- Fallback if no image is provided -->
+                  <img src="{% static 'assets/img/default-project.jpg' %}" alt="Default Project Image" class="w-full h-48 object-cover">
+              {% endif %}
+              <div class="p-6">
+                  <h3 class="text-xl font-bold mb-2">{{ project.title }}</h3>
+                  <p class="text-gray-700 text-base">{{ project.description }}</p>
+              </div>
+          </div>
+      {% empty %}
+          <p class="text-center text-gray-700">No projects available at the moment.</p>
+      {% endfor %}
+  </div>
+</section>
+
+{% endblock %}

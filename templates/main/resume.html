@@ -1,0 +1,96 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}Resume - Bijumon Sekharan{% endblock %}
+
+{% block content %}
+<!-- Resume Header -->
+<section class="bg-gray-200 py-8 text-center">
+    <h1 class="text-4xl font-bold text-blue-600 mb-2">Bijumon Sekharan</h1>
+    <p class="text-lg text-gray-700">Senior Software Developer</p>
+    <p class="text-gray-600">Phone: +91-7736099496 | Email: sekharanbijumon@gmail.com</p>
+    <p class="text-gray-600">LinkedIn: linkedin.com/in/bijumonsekharan</p>
+</section>
+
+<!-- Profile Summary -->
+<section class="container mx-auto my-8 p-6 bg-white shadow rounded">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Professional Summary</h2>
+    <p class="text-gray-700 leading-relaxed">Highly accomplished software engineer with over 11 years of experience specializing in Python, Django, and frontend technologies. Skilled in delivering high-quality software, with extensive knowledge in backend development, cloud services, and DevOps practices. Proven track record in leading teams, mentoring developers, and collaborating with international clients to deliver scalable applications.</p>
+</section>
+
+<!-- Skills Section -->
+<section class="container mx-auto my-8 p-6 bg-white shadow rounded">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Skills</h2>
+    <div class="grid grid-cols-2 gap-4 text-gray-700">
+        <ul>
+            <li>- Programming: Python</li>
+            <li>- Frameworks: Django, Flask, FastAPI, Pydantic</li>
+            <li>- Frontend: HTML, CSS, Bootstrap, HTMX, JavaScript, React</li>
+            <li>- Cloud: AWS (EC2, S3, RDS, Lambda), Azure (Functions)</li>
+        </ul>
+        <ul>
+            <li>- DevOps: Jenkins, Docker, GitHub Actions, Azure DevOps</li>
+            <li>- Databases: MySQL, PostgreSQL, SQLAlchemy</li>
+            <li>- Tools: Elasticsearch, Git, Bitbucket</li>
+            <li>- Testing: PyTest, unittest</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Professional Experience Section -->
+<section class="container mx-auto my-8 p-6 bg-white shadow rounded">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Professional Experience</h2>
+
+    <!-- Job 1 -->
+    <div class="mb-6">
+        <h3 class="text-xl font-semibold text-blue-600">Senior Software Developer</h3>
+        <p class="text-gray-600">Ejyle, Bangalore | May 2023 – Present</p>
+        <ul class="list-disc list-inside text-gray-700 mt-2">
+            <li>Develop and maintain applications in the food sector using Python, Django, and Flask.</li>
+            <li>Collaborate with international clients to understand requirements and ensure high-quality software solutions.</li>
+            <li>Lead a team of 5 developers, implementing features such as SSO and SCM.</li>
+        </ul>
+    </div>
+
+    <!-- Job 2 -->
+    <div class="mb-6">
+        <h3 class="text-xl font-semibold text-blue-600">Software Engineer</h3>
+        <p class="text-gray-600">Wegren Technologies Pvt. Ltd., Bangalore | Oct 2022 – May 2023</p>
+        <ul class="list-disc list-inside text-gray-700 mt-2">
+            <li>Developed RESTful APIs and scalable database models for a Service Desk application in the health sector.</li>
+            <li>Mentored junior developers, ensuring code quality and adherence to best practices.</li>
+        </ul>
+    </div>
+
+    <!-- Job 3 -->
+    <div class="mb-6">
+        <h3 class="text-xl font-semibold text-blue-600">Lead Developer</h3>
+        <p class="text-gray-600">Planet Media India Limited, Kochi, Kerala | July 2020 – Oct 2022</p>
+        <ul class="list-disc list-inside text-gray-700 mt-2">
+            <li>Led a team of 8 developers to create a multitenant application for the fitness industry using Django and React.</li>
+            <li>Oversaw code reviews and testing, ensuring robust and scalable solutions.</li>
+        </ul>
+    </div>
+
+    <!-- Additional Experience -->
+    <div class="mt-6">
+        <h3 class="text-xl font-semibold text-blue-600">Other Roles</h3>
+        <p class="text-gray-600">Various roles from Python Developer at Techno Solutions and Gowdanar Technologies, focusing on finance applications, refinery process management, and more.</p>
+    </div>
+</section>
+
+<!-- Education Section -->
+<section class="container mx-auto my-8 p-6 bg-white shadow rounded">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Education</h2>
+    <p class="text-gray-600">Associate Membership in Engineering | Government Polytechnic, Kottayam</p>
+    <p class="text-gray-600">Diploma in Engineering | Government Polytechnic, Kottayam</p>
+</section>
+
+<!-- Contact Information Section -->
+<section class="container mx-auto my-8 p-6 bg-white shadow rounded">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Contact Information</h2>
+    <p class="text-gray-700">For collaboration or inquiries:</p>
+    <p class="text-gray-600 mt-2">Email: sekharanbijumon@gmail.com</p>
+    <p class="text-gray-600">Phone: +91-7736099496</p>
+</section>
+{% endblock %}

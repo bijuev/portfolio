@@ -1,0 +1,24 @@
+/* Navbar and Footer */
+.navbar, .footer {
+    background-color: #007BFF;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #007BFF;
+    border-color: #007BFF;
+}
+.btn-primary:hover {
+    background-color: #365bb5;
+}
+
+/* Headings and Links */
+h1, h2, h3, .text-blue {
+    color: #007BFF;
+}
+a {
+    color: #007BFF;
+}
+a:hover {
+    color: #365bb5;
+}
