@@ -1,11 +1,11 @@
 services:
   web:
     build: .
-    command: gunicorn portfolio.wsgi:application --bind 127.0.0.1:8000
+    command: gunicorn portfolio.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - .:/app
-    expose:
-      - "8000"
+    ports:
+      - "8000:8000"
     environment:
       - DEBUG=False
     depends_on:
@@ -26,7 +26,7 @@ services:
       - app-network
 
   db:
-    image: nouchka/sqlite3:latest  # No need for a port
+    image: nouchka/sqlite3:latest
     volumes:
       - ./db.sqlite3:/app/db.sqlite3  # Mount the SQLite file as a volume
     networks:

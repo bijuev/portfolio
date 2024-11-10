@@ -10,9 +10,9 @@ class Project(models.Model):
     project_url = models.URLField(blank=True)
     image = models.ImageField(upload_to='projects/', blank=True, null=True)
     image_thumbnail = ImageSpecField(source='image',
-                                     processors=[ResizeToFit(200, 150)],
+                                     processors=[ResizeToFit(400, 300)],
                                      format='JPEG',
-                                     options={'quality': 80})
+                                     options={'quality': 90})
 
     def __str__(self):
         return self.title
