@@ -36,4 +36,5 @@ ngrok
 client_admin/test.mp4
 .pytest_cache
 debug.log
-migrations/
+migrations/CACHE/
+CACHE/
