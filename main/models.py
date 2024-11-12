@@ -18,8 +18,39 @@ class Project(models.Model):
         return self.title
 
 
-class Skill(models.Model):
-    name = models.CharField(max_length=50)
+class Profile(models.Model):
+    name = models.CharField(max_length=200)
+    designation = models.CharField(max_length=100)
+    phone = models.CharField(max_length=20)
+    email = models.EmailField()
+    linkedin = models.URLField()
 
     def __str__(self):
         return self.name
+
+
+class Skill(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+
+class Experience(models.Model):
+    title = models.CharField(max_length=200)
+    company = models.CharField(max_length=200)
+    location = models.CharField(max_length=200)
+    start_date = models.DateField()
+    end_date = models.DateField(null=True, blank=True)
+    responsibilities = models.TextField()
+
+    def __str__(self):
+        return f"{self.title} at {self.company}"
+
+
+class Contact(models.Model):
+    email = models.EmailField()
+    phone = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.email
