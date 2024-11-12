@@ -4,10 +4,15 @@
 {% block title %}About Me - Bijumon Sekharan{% endblock %}
 
 {% block content %}
-<div class="about-section pt-16 mb-8 min-h-screen flex flex-col">
+<!-- About Section -->
+<div class="about-section mb-8 min-h-screen flex flex-col md:flex-row items-center">
+    <!-- Image Section -->
+    <img src="{% static 'img/biju.jpeg' %}" alt="Bijumon Sekharan" class="rounded-full w-32 h-32 md:w-48 md:h-48 object-cover mb-6 md:mb-0 md:mr-8">
+    
+    <!-- Text Section -->
     <div class="flex-grow">
         <h2 class="text-2xl font-bold text-blue-600 mb-4">About Me</h2>
-        <p class="text-gray-700 mb-4">
+        <p class="text-gray-700 mb-4 text-justify">
             Hello! I'm <strong>Bijumon S</strong>, a dedicated and solution-oriented 
             <span class="font-semibold">Senior Software Developer</span> with over a decade of experience 
             in building robust web applications and scalable backend systems. I specialize in 
@@ -17,14 +22,14 @@
             <span class="font-semibold">healthcare</span>, <span class="font-semibold">supply chain 
             management</span>, and <span class="font-semibold">financial services</span>.
         </p>
-        <p class="text-gray-700 mb-4">
+        <p class="text-gray-700 mb-4 text-justify">
             With a focus on full-stack development, I thrive on creating efficient, user-centric 
             applications that streamline operations and improve client outcomes. My recent projects 
             have involved integrating <span class="font-semibold">SSO</span> (Single Sign-On) for seamless 
             cross-platform access, automating complex <span class="font-semibold">SCM workflows</span>, 
             and designing multi-tenant architectures for SaaS applications in the fitness industry.
         </p>
-        <p class="text-gray-700 mb-4">
+        <p class="text-gray-700 mb-4 text-justify">
             I'm a collaborative team player who enjoys mentoring junior developers and working closely 
             with cross-functional teams to deliver high-quality, maintainable software. Outside of 
             development, I'm expanding my knowledge in <span class="font-semibold">DevOps</span> to 
@@ -40,7 +45,7 @@
         </ul>
 
         <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Career Goals</h3>
-        <p class="text-gray-700 mb-4">
+        <p class="text-gray-700 mb-4 text-justify">
             I'm always seeking to deepen my expertise in software engineering and am particularly 
             interested in exploring more opportunities in <span class="font-semibold">European markets</span>. 
             My goal is to work on projects that push the boundaries of technology, especially those 
@@ -49,5 +54,7 @@
         </p>
     </div>
 </div>
+
+
 
 {% endblock %}

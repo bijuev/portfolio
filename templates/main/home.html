@@ -5,22 +5,29 @@
 
 {% block content %}
 <!-- Hero Section -->
-<section class="bg-gray-200 py-24 md:py-32 text-center md:text-left px-6 md:px-12">
-    <h1 class="text-4xl font-bold text-blue-600 mb-6">Welcome to Bijumon Sekharan's Portfolio</h1>
-    <p class="text-lg text-gray-700 mb-8 text-justify">
-        Hello! I'm <strong>Bijumon Sekharan</strong>, a dedicated and solution-oriented <span class="font-semibold">Senior Software Developer</span> 
-        with over a decade of experience in building robust web applications and scalable backend systems. I specialize in 
-        <span class="font-semibold">Python</span>, <span class="font-semibold">Django</span>, and <span class="font-semibold">Flask</span>, 
-        and have a strong track record of implementing solutions in industries such as <span class="font-semibold">food safety</span>, 
-        <span class="font-semibold">healthcare</span>, <span class="font-semibold">supply chain management</span>, and <span class="font-semibold">financial services</span>.
-    </p>
-    <p class="text-lg text-gray-700 mb-8 text-justify">
-        With a focus on full-stack development, I thrive on creating efficient, user-centric applications that streamline operations 
-        and improve client outcomes. I'm always looking to expand my expertise, especially in <span class="font-semibold">DevOps</span> 
-        to enhance deployment efficiency and reliability.
-    </p>
-    <a href="{% url 'contact' %}" class="mt-6 inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-500">Get in Touch</a>
+<section class="bg-gray-200 py-24 md:py-32 text-center md:text-left px-6 md:px-12 flex flex-col md:flex-row items-center">
+    <!-- Image Section -->
+    <img src="{% static 'img/biju.jpeg' %}" alt="Bijumon Sekharan" class="rounded-full w-32 h-32 md:w-48 md:h-48 object-cover mb-6 md:mb-0 md:mr-8">
+    
+    <!-- Text Section -->
+    <div class="text-center md:text-left">
+        <h1 class="text-4xl font-bold text-blue-600 mb-6">Welcome to Bijumon Sekharan's Portfolio</h1>
+        <p class="text-lg text-gray-700 mb-8 text-justify">
+            Hello! I'm <strong>Bijumon Sekharan</strong>, a dedicated and solution-oriented <span class="font-semibold">Senior Software Developer</span> 
+            with over a decade of experience in building robust web applications and scalable backend systems. I specialize in 
+            <span class="font-semibold">Python</span>, <span class="font-semibold">Django</span>, and <span class="font-semibold">Flask</span>, 
+            and have a strong track record of implementing solutions in industries such as <span class="font-semibold">food safety</span>, 
+            <span class="font-semibold">healthcare</span>, <span class="font-semibold">supply chain management</span>, and <span class="font-semibold">financial services</span>.
+        </p>
+        <p class="text-lg text-gray-700 mb-8 text-justify">
+            With a focus on full-stack development, I thrive on creating efficient, user-centric applications that streamline operations 
+            and improve client outcomes. I'm always looking to expand my expertise, especially in <span class="font-semibold">DevOps</span> 
+            to enhance deployment efficiency and reliability.
+        </p>
+        <a href="{% url 'contact' %}" class="mt-6 inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-500">Get in Touch</a>
+    </div>
 </section>
+
 
 <!-- Portfolio Section -->
 <section class="py-12 px-4">
@@ -37,7 +44,7 @@
               {% endif %}
               <div class="p-6">
                   <h3 class="text-xl font-bold mb-2">{{ project.title }}</h3>
-                  <p class="text-gray-700 text-base">{{ project.description }}</p>
+                  <p class="text-gray-700 text-base text-justify">{{ project.description }}</p>
               </div>
           </div>
       {% empty %}
